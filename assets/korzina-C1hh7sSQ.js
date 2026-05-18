@@ -1,0 +1,9 @@
+import{a as e,c as t,i as n,n as r,r as i,s as a}from"./storage-DyyFppyd.js";t((()=>{e();var t=document.getElementById(`cartList`),o=document.getElementById(`cartTotal`),s=document.getElementById(`cartCount`),c=n(),l=i();function u(){c=n(),s.textContent=c.length}function d(e,t=`success`){let n=document.createElement(`div`);n.className=`notification ${t}`,n.textContent=e,document.body.appendChild(n),setTimeout(()=>n.remove(),2e3)}function f(){if(!t)return;if(c=n(),c.length===0){t.innerHTML=`<div class="empty-state">Корзина пуста</div>`,o.innerHTML=`Итого: 0 ₽`;return}let e=0;t.innerHTML=``,c.forEach((n,r)=>{e+=n.price;let i=document.createElement(`div`);i.className=`cart-item`,i.innerHTML=`
+            <div class="cart-item-info">
+                <div class="cart-item-title">${n.title}</div>
+                <div class="cart-item-details">📍 ${n.venue}</div>
+                <div class="cart-item-details">${n.date}</div>
+                <div class="cart-item-details">${n.price.toLocaleString()} ₽</div>
+            </div>
+            <button class="remove-from-cart" data-index="${r}">✕</button>
+        `,t.appendChild(i)}),o.innerHTML=`Итого: ${e.toLocaleString()} ₽`,document.querySelectorAll(`.remove-from-cart`).forEach(e=>{e.addEventListener(`click`,()=>{let t=a(parseInt(e.dataset.index),c);c=n(),d(`"${t.title}" удалено из корзины`,`error`),f(),u()})})}document.getElementById(`checkoutBtn`).addEventListener(`click`,()=>{if(c=n(),c.length===0){d(`Корзина пуста`,`error`);return}l=i();let e=r(c,l);c=e.newCart,l=e.bookings,d(`Успешно забронировано ${e.bookings.length} билетов!`),f(),u(),setTimeout(()=>{window.location.href=`./profile.html`},1500)}),f(),u()}))();
