@@ -1,0 +1,76 @@
+/* Планшеты */
+@media (768px <= width < 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .profile-stats {
+        justify-content: center;
+    }
+}
+
+/* Телефоны */
+@media (width < 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    .nav-buttons {
+        justify-content: center;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .category-section {
+        margin-bottom: 40px;
+    }
+    .category-title {
+        font-size: 22px;
+    }
+    
+    .cart-container, .profile-container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+    .page-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .booking-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cancel-booking {
+        width: 100%;
+    }
+    .footer__social {
+        text-align: center;
+    }
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        justify-self: center;
+    }
+    .social-links img {
+        width: 32px;  
+        height: 32px;
+    }
+    
+    .hero-banner {
+        padding: 20px;
+    }
+    .hero-banner__content h2 {
+        font-size: 20px;
+    }
+}
