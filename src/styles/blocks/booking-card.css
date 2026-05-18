@@ -1,0 +1,16 @@
+.booking-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #27ae60;
+    border-bottom: 1px solid #eee; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.booking-card:last-child {
+    border-bottom: none;
+}
