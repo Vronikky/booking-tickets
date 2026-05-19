@@ -1,6 +1,6 @@
 export async function fetchEvents() {
     try {
-        // Используем BASE_URL, который Vite подставит автоматически
+
         const base = import.meta.env.BASE_URL;
         const response = await fetch(`${base}events.json`);
         if (!response.ok) throw new Error(`HTTP ошибка: ${response.status}`);

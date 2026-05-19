@@ -20,14 +20,15 @@ export class EventCard {
         const imageContainer = document.createElement('div');
         imageContainer.className = 'event-card__image';
         
+        
         const base = import.meta.env.BASE_URL;
         
         let imageUrl = this.event.image;
         if (!imageUrl) {
+            // Если картинка не указана, берём по категории
             const imageName = this.getImageNameByCategory();
             imageUrl = `${base}images/${imageName}.jpg`;
         } else {
-            
             if (imageUrl.startsWith('/')) {
                 imageUrl = `${base}${imageUrl.slice(1)}`;
             } else {
@@ -43,6 +44,7 @@ export class EventCard {
         img.style.objectFit = 'cover';
         
         img.onerror = () => {
+            // Если картинка не загрузилась, показываем эмодзи и градиент
             imageContainer.innerHTML = this.getCategoryEmoji();
             imageContainer.style.display = 'flex';
             imageContainer.style.alignItems = 'center';
