@@ -27,7 +27,7 @@ export class ProfilePage {
         header.className = 'page-header';
         header.innerHTML = `
             <h2>Мои бронирования</h2>
-            <a href="/" class="back-link">← Назад к мероприятиям</a>
+            <a href="." class="back-link">← Назад к мероприятиям</a>
         `;
         profileContainer.appendChild(header);
 
