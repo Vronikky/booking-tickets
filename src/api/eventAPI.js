@@ -1,6 +1,6 @@
 export async function fetchEvents() {
     try {
-
+        await new Promise(resolve => setTimeout(resolve, 500));
         const base = import.meta.env.BASE_URL;
         const response = await fetch(`${base}events.json`);
         if (!response.ok) throw new Error(`HTTP ошибка: ${response.status}`);
