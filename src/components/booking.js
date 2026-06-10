@@ -40,7 +40,7 @@ export class BookingCard {
         info.appendChild(price);
 
         const status = document.createElement('div');
-        status.className = 'bbooking-card__status';
+        status.className = 'booking-card__status';
         status.textContent = 'Активен';
         info.appendChild(status);
 
