@@ -17,36 +17,36 @@ export class BookingCard {
         card.className = 'booking-card';
 
         const info = document.createElement('div');
-        info.className = 'booking-info';
+        info.className = 'booking-card__info';
 
         const title = document.createElement('div');
-        title.className = 'booking-title';
+        title.className = 'booking-card__title';
         title.textContent = this.booking.title;
         info.appendChild(title);
 
         const venue = document.createElement('div');
-        venue.className = 'booking-details';
+        venue.className = 'booking-card__details';
         venue.innerHTML = `📍 ${this.booking.venue}`;
         info.appendChild(venue);
 
         const date = document.createElement('div');
-        date.className = 'booking-details';
+        date.className = 'booking-card__details';
         date.innerHTML = `${this.formatDate(this.booking.date)}`;
         info.appendChild(date);
 
         const price = document.createElement('div');
-        price.className = 'booking-details';
+        price.className = 'booking-card__details';
         price.innerHTML = `${this.booking.price.toLocaleString()} ₽`;
         info.appendChild(price);
 
         const status = document.createElement('div');
-        status.className = 'booking-status';
+        status.className = 'bbooking-card__status';
         status.textContent = 'Активен';
         info.appendChild(status);
 
         if (this.booking.bookedAt) {
             const bookedAt = document.createElement('div');
-            bookedAt.className = 'booking-details';
+            bookedAt.className = 'booking-card__details';
             bookedAt.innerHTML = `Забронировано: ${this.booking.bookedAt}`;
             info.appendChild(bookedAt);
         }
@@ -54,7 +54,7 @@ export class BookingCard {
         card.appendChild(info);
 
         const cancelBtn = document.createElement('button');
-        cancelBtn.className = 'cancel-booking';
+        cancelBtn.className = 'booking-card__cancel';
         cancelBtn.textContent = 'Отменить';
         cancelBtn.addEventListener('click', () => this.onCancel(this.booking.id));
         card.appendChild(cancelBtn);
