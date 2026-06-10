@@ -1,5 +1,5 @@
 /* Планшеты */
-@media (768px <= width < 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .events-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -40,12 +40,11 @@
         flex-direction: column;
         text-align: center;
     }
-    
-    .booking-item {
+    .booking-card {
         flex-direction: column;
         text-align: center;
     }
-    .cancel-booking {
+    .booking-card__cancel {
         width: 100%;
     }
     .footer__social {
